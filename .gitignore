@@ -24,10 +24,10 @@ src/*.dat
 src/*.out
 src/*.pid
 src/*.gz
-src/
+
 src/pids
 src/logs
 src/results
-src/
+
 src/node_modules
 src/npm-debug.log
