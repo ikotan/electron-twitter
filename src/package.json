@@ -2,6 +2,9 @@
   "name": "ElectronTwitter",
   "version": "1.0.0",
   "description": "Electronを使ったサンプルアプリケーション",
+  "scripts": {
+    "start": "electron src",
+  },
   "dependencies": {
     "babel-plugin-transform-react-jsx": "6.8.0",
     "babel-register": "6.9.0",
