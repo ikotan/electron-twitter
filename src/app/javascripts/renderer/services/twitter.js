@@ -2,8 +2,8 @@ const Twit = require('twit');
 const ENV = process.env;
 
 module.exports = new Twit({
-  "consumer_key": ENV.TWIT_CONSUMER_KEY,
-  "consumer_secret": ENV.TWIT_CONSUMER_SECRET,
-  "access_token": ENV.TWIT_ACCESS_TOKEN,
-  "access_token_secret": ENV.TWIT_ACCESS_SECRET
+  "consumer_key": '4yXhoC09mu1oqt5IwkCfoi8DR',
+  "consumer_secret": 'ZZJnPaa1YL5l2e0bxKujYNynveidOKeJchgeftHIjNQ1L8Dlsi',
+  "access_token": '2700067794-vw3lceJNERLxuFenfuwHow4LEW0IaL9BmIbXcuA',
+  "access_token_secret": 'O7aRpNb8hcsevZDI2tlP46NXj1nBLHGWALdl7mRz3XIbX'
 });
