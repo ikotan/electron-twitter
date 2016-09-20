@@ -81,14 +81,19 @@ module.exports = class MainContent extends React.Component {
   }
 
   notifyIfMention(tweet) {
-    const isMention = tweet.entities.user_mentions.findIndex((user) => {
-      return user.id === this.state.user.id;
-    }) >= 0;
-    if (!isMention) {
-      return;
-    }
+    // const isMention = tweet.entities.user_mentions.findIndex((user) => {
+      // return user.id === this.state.user.id;
+    // }) >= 0;
+    // if (!isMention) {
+      // return;
+    // }
 
-    new Notification('メンションがあります。', {
+    // new Notification('メンションがあります。', {
+      // body: tweet.text,
+      // icon: tweet.user.profile_image_url_https
+    // });
+
+    new Notification('新規通知があります。', {
       body: tweet.text,
       icon: tweet.user.profile_image_url_https
     });
