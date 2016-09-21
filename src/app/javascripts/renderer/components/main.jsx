@@ -1,5 +1,6 @@
 const React = require('react');
 const T = require('../services/twitter');
+const {ipcRenderer} = require('electron');
 
 class Tweet extends React.Component {
   render() {
@@ -50,6 +51,7 @@ module.exports = class MainContent extends React.Component {
       .then((result) => {
         console.log(result);
         if (result.data.errors) {
+          console.log(result.data.errors);
           return;
         }
         this.setState({user: result.data});
@@ -92,6 +94,8 @@ module.exports = class MainContent extends React.Component {
       // body: tweet.text,
       // icon: tweet.user.profile_image_url_https
     // });
+
+    ipcRenderer.send('newMention');
 
     new Notification('新規通知があります。', {
       body: tweet.text,
