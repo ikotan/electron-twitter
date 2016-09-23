@@ -10,6 +10,7 @@ class Tweet extends React.Component {
     const firstImage = media.find((item) => {
       return item.type === 'photo';
     });
+    const islink = status.entities.urls[0];
 
     return (
       <li className='list-group-item'>
@@ -18,6 +19,7 @@ class Tweet extends React.Component {
           <strong className='user-name'>{status.user.name}</strong>
           <span className='user-screen_name'>@{status.user.screen_name}</span>
           <p className='text'>{status.text}</p>
+          {islink ? <a href={islink.url} className='user-name'>{islink.url}</a> : null}
           {firstImage ? <img src={firstImage.media_url_https} className='img-rounded media-object media-img' /> : null}
           {isRetweet ? <span className='icon icon-retweet'>Retweeted by {this.props.tweet.user.name}</span> : null}
         </div>
@@ -49,9 +51,7 @@ module.exports = class MainContent extends React.Component {
         console.log(error);
       })
       .then((result) => {
-        console.log(result);
         if (result.data.errors) {
-          console.log(result.data.errors);
           return;
         }
         this.setState({user: result.data});

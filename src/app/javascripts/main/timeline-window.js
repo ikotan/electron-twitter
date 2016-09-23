@@ -35,6 +35,8 @@ module.exports = class TimelineWindow {
     });
 
     this.window.loadURL(`file://${__dirname}/../../html/main.html`);
+
+    // this.window.webContents.openDevTools();
   }
 
   updateBadge() {

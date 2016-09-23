@@ -1,9 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "start": "electron src"
+    "start": "electron src",
+    "start:inspector": "ELECTRON_RUN_AS_NODE=true electron node_modules/node-inspector/bin/inspector.js",
+    "test": "mocha"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.2.8"
+    "devtron": "^1.2.1",
+    "electron-prebuilt": "1.2.8",
+    "electron-rebuild": "^1.1.5",
+    "mocha": "^2.5.3",
+    "node-inspector": "^0.12.8",
+    "spectron": "^3.2.4"
   }
 }

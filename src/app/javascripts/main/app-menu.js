@@ -58,7 +58,7 @@ module.exports = class AppMenu {
         label: 'View',
         submenu: [
           {
-            role: 'reload',
+            label: 'reload',
             accelerator: 'CmdOrCtrl+R',
             click(item, focusedWindow) {
               if (focusedWindow) focusedWindow.reload();
